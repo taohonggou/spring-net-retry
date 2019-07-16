@@ -168,7 +168,7 @@ namespace Spring.Retry.Retry.Support
                 throw new ArgumentException("retryCallback must be an IRetryCallback<T> or a Func<IRetryContext, T>");
             }
 
-            if (recoveryCallback != null && (!(recoveryCallback is IRetryCallback<T>) & !(recoveryCallback is Func<IRetryContext, T>)))
+            if (recoveryCallback != null && (!(recoveryCallback is IRecoveryCallback<T>) & !(recoveryCallback is Func<IRetryContext, T>)))
             {
                 throw new ArgumentException("recoveryCallback must be an IRecoveryCallback<T> or a Func<IRetryContext, T>");
             }
